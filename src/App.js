@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './logo.png';
 import './App.css';
 import EsriLoaderReact from 'esri-loader-react';
 
@@ -11,24 +11,20 @@ class App extends Component {
 
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
+        <img src={logo} className="App-logo" alt="logo" />
+          <h1 className = "App-header">
+            Simpliflight
+          </h1>
+          <p className = "Paragraphs">
+            Username
+            <br/>
+            Password
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-        
-        <EsriLoaderReact 
-          options={options} 
-          modulesToLoad={['esri/Map', 'esri/views/MapView']}    
+
+
+        <EsriLoaderReact
+          options={options}
+          modulesToLoad={['esri/Map', 'esri/views/MapView']}
           onReady={({loadedModules: [Map, MapView], containerNode}) => {
             new MapView({
               container: containerNode,
